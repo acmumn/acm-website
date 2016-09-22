@@ -15,9 +15,27 @@ body
   background-color: $fg-color-primary
   color: $bg-color-primary
 
-main
+body > main
   background-color: $bg-color-primary
   color: $fg-color-primary
+
+  &> section
+    padding-top: 25px
+    padding-bottom: 25px
+
+    &:nth-child(even)
+      background-color: $bg-color-secondary
+      color: $fg-color-secondary
+
+    &:first-of-type
+      padding-top: 50px
+    &:last-of-type
+      padding-bottom: 50px
+
+    &> .content
+      max-width: 768px
+      margin-left: auto
+      margin-right: auto
 
 a
   text-decoration: none
@@ -26,4 +44,3 @@ a
 ul
   list-style-type: none
   padding-left: 10px
-
