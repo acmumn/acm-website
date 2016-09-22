@@ -4,9 +4,16 @@
 <!DOCTYPE html>
 
 <html>
-  {% include head.html %}
+  {% include metadata.html %}
+  {% include styles.html %}
 
   <body>
-    {{ content }}
+    {% include navbar.html %}
+
+    <main>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
   </body>
 </html>
