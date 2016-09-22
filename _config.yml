@@ -1,0 +1,28 @@
+# Site settings
+title: ACM UMN
+email: acm@umn.edu
+description: > 
+  Association for Computing Machinery, University of Minnesota,
+  Twin Cities student chapter. Our goal is to promote interest
+  in computing throughout the Twin Cities area, especially to
+  help with the study of computing and programming within the
+  UMN Twin Cities campus.
+baseurl: /
+url: acm.umn.edu
+
+# Build settings.
+markdown: kramdown
+permalink: pretty
+sass:
+  style: compressed
+  sass_dir: _sass
+
+gems:
+  - jekyll-press  # minification for all files
+
+# tsc: /usr/local/bin/tsc
+ts-src: ts
+js-dest: js
+
+# Stuff that shouldn't be copied into the published website.
+exclude:
