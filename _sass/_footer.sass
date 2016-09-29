@@ -6,9 +6,38 @@
   padding-top: 30px
   padding-bottom: 30px
 
+  font-size: 12px
+
   background-color: $fg-color-primary
   color: $bg-color-primary
+  
+  #officers
+    display: inline-block
+    vertical-align: middle
+    max-width: $phone-breakpoint / 2
+    margin-right: $column-gutter / 2
+
+    ul
+      +centered
+
+      .position
+        font-style: italic
+
+    h1
+      font-size: 18px
+      font-weight: bold
+      text-transform: uppercase
+      text-align: center
+
+      margin-bottom: 10px
+
+  #contact-info
+    display: inline-block
+    vertical-align: middle
+    max-width: $phone-breakpoint / 2
+    margin-left: $column-gutter / 2
 
   &> .content
+    +centered
     display: block
     max-width: $phone-breakpoint

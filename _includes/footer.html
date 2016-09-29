@@ -9,13 +9,15 @@
               {{ officer.name }}
             </a>
             &mdash;
-            {{ officer.position }}
+            <span class="position">
+              {{ officer.position }}
+            </span>
           </li>
         {% endfor %}
       </ul>
     </div>
 
-    <address>
+    <address id="contact-info">
       Association for Computing Machinery
       Keller Hall 2-204
       200 Union Street S.

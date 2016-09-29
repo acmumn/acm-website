@@ -12,11 +12,15 @@ body
 
   background-color: $fg-color-primary
   color: $bg-color-primary
+
   font-family: sans-serif
 
 body > main
   background-color: $bg-color-primary
   color: $fg-color-primary
+
+  font-size: 14px
+  line-height: 1.5em
 
   &> section
     padding-top: 25px
@@ -32,9 +36,13 @@ body > main
       padding-bottom: 50px
 
     &> .content
+      +centered
       max-width: $phone-breakpoint
-      margin-left: auto
-      margin-right: auto
+
+    h1, h2, h3, h4, h5, h6
+      text-transform: uppercase
+      letter-spacing: 2px
+      line-height: 1.8em
 
 a
   text-decoration: none
