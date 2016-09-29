@@ -10,10 +10,22 @@
 
   background-color: $fg-color-primary
   color: $bg-color-primary
+
+  h1, h2
+    text-align: center
+
+  h1
+    font-size: 18px
+    margin-bottom: 10px
+
+  h2
+    font-size: 14px
+    text-transform: uppercase
+    margin: 5px 0px 
   
   #officers
     display: inline-block
-    vertical-align: middle
+    vertical-align: top
     max-width: $phone-breakpoint / 2
     margin-right: $column-gutter / 2
 
@@ -23,19 +35,16 @@
       .position
         font-style: italic
 
-    h1
-      font-size: 18px
-      font-weight: bold
-      text-transform: uppercase
-      text-align: center
-
-      margin-bottom: 10px
-
   #contact-info
     display: inline-block
-    vertical-align: middle
+    vertical-align: top
     max-width: $phone-breakpoint / 2
     margin-left: $column-gutter / 2
+
+    text-align: center
+
+    address
+      font-style: normal
 
   &> .content
     +centered
