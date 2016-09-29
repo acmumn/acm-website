@@ -2,8 +2,6 @@
    Styles that only apply to specific parts should go
    in their own files.
 
-@charset "utf-8"
-
 *
   margin: 0px
   padding: 0px
@@ -14,6 +12,7 @@ body
 
   background-color: $fg-color-primary
   color: $bg-color-primary
+  font-family: sans-serif
 
 body > main
   background-color: $bg-color-primary
@@ -33,7 +32,7 @@ body > main
       padding-bottom: 50px
 
     &> .content
-      max-width: 768px
+      max-width: $phone-breakpoint
       margin-left: auto
       margin-right: auto
 

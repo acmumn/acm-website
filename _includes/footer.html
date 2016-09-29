@@ -1,12 +1,25 @@
 <footer id="footer">
-  <ul id="officers">
-    <li>Kairi Lassard</li>
-  </ul>
+  <div class="content">
+    <div id="officers">
+      <h1>ACM Officers 2016-2017</h1>
+      <ul>
+        {% for officer in site.data.officers %}
+          <li>
+            <a href="mailto:{{ officer.email }}">
+              {{ officer.name }}
+            </a>
+            &mdash;
+            {{ officer.position }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
 
-  <address>
-    Association for Computing Machinery
-    Keller Hall 2-204
-    200 Union Street S.
-    Minneapolis, MN 55455
-  </address>
+    <address>
+      Association for Computing Machinery
+      Keller Hall 2-204
+      200 Union Street S.
+      Minneapolis, MN 55455
+    </address>
+  </div>
 </footer>
