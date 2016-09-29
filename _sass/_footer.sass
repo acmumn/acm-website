@@ -1,10 +1,21 @@
 // Footer styling.
 
+%column
+  display: block
+  margin: 20px 0px
+
+@media (min-width: $phone-breakpoint)
+  %column
+    width: ($phone-breakpoint / 2) - $column-gutter
+    display: inline-block
+    vertical-align: top
+    margin: 20px ($column-gutter / 2)
+
 #footer
   min-height: 100px
   width: 100%
-  padding-top: 30px
-  padding-bottom: 30px
+  padding-top: 20px
+  padding-bottom: 20px
 
   font-size: 12px
 
@@ -24,29 +35,31 @@
     margin: 5px 0px 
   
   #officers
-    display: inline-block
-    vertical-align: top
-    max-width: $phone-breakpoint / 2
-    margin-right: $column-gutter / 2
+    @extend %column
+
+    text-align: center
 
     ul
       +centered
+      text-align: left
+      display: inline-block
 
       .position
         font-style: italic
 
   #contact-info
-    display: inline-block
-    vertical-align: top
-    max-width: $phone-breakpoint / 2
-    margin-left: $column-gutter / 2
+    @extend %column
 
     text-align: center
 
     address
       font-style: normal
 
+      ol
+        list-style-type: none
+
   &> .content
     +centered
     display: block
     max-width: $phone-breakpoint
+    padding: 0px -($column-gutter / 2)
