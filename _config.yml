@@ -27,3 +27,15 @@ js-dest: js
 # Stuff that shouldn't be copied into the published website.
 exclude:
   - README.md
+
+# Collections of data.
+collections:
+  events:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: default
