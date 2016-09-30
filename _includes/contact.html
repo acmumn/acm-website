@@ -5,9 +5,14 @@
     <h1>Contact us!</h1>
 
     <form id="contact-form" action="#">
+      <span aria-hidden="true">
+        <span class="required"></span>
+        Marked fields are required
+      </span>
+
       <label for="contact-form-email">
         <span class="required"></span>
-        Your email address
+        Your Email Address
       </label>
       <input type="email"
              id="contact-form-email"
@@ -23,7 +28,7 @@
 
       <label for="contact-form-message">
         <span class="required"></span>
-        Your message
+        Your Message
       </label>
       <textarea id="contact-form-message" required></textarea>
 
