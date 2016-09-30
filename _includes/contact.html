@@ -3,5 +3,37 @@
 <section id="contact">
   <div class="content">
     <h1>Contact us!</h1>
+
+    <form id="contact-form" action="#">
+      <label for="contact-form-email">
+        <span class="required"></span>
+        Your email address
+      </label>
+      <input type="email"
+             id="contact-form-email"
+             placeholder="first.last@email.com"
+             required/>
+      
+      <label for="contact-form-subject">
+        Subject
+      </label>
+      <input type="text"
+             id="contact-form-subject"
+             placeholder="ACM is super awesome!"/>
+
+      <label for="contact-form-message">
+        <span class="required"></span>
+        Your message
+      </label>
+      <textarea id="contact-form-message" required></textarea>
+
+      <div class="buttons">
+        <button type="button"
+                id="contact-form-submit"
+                class="primary-button">
+          Send!
+        </button>
+      </div>
+    </form>
   </div>
 </section>

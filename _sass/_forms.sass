@@ -1,0 +1,54 @@
+// Forms are pretty important.
+
+form
+  text-align: center
+
+label
+  display: block
+  margin-top: 10px
+
+  text-align: center
+  font-size: 14px
+  font-weight: bold
+  line-height: 2em
+  letter-spacing: -1px
+
+input, textarea, select
+  display: block
+  width: 100%
+  background: #f4f4f4
+  border: 1px solid $accent-color-secondary
+
+  padding: 10px 15px
+
+  font-size: 15px
+
+textarea
+  resize: none
+
+  min-height: 8em
+
+.buttons
+  margin-top: 25px
+
+.required:before
+  content: "*"
+  color: red
+  font-size: 20px
+  margin: 0px 5px
+
+button.primary-button
+  border: none
+  border-radius: 5px
+  background-color: $accent-color-primary
+  cursor: pointer
+
+  padding: 15px 25px
+
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 22px
+  color: #fff
+
+  &:hover
+    background-color: $logo-color-blue

@@ -11,6 +11,11 @@ h1, h2, h3, h4, h5, h6
   letter-spacing: 2px
   line-height: 1.8em
 
+h1
+  text-align: center
+  font-size: 26px
+  margin-bottom: 15px
+
 @media (max-width: $phone-breakpoint)
   h1, h2, h3, h4, h5, h6
     text-align: center
@@ -32,7 +37,7 @@ body > main
   line-height: 1.5em
 
   &> section
-    padding: 35px 15px
+    padding: 35px ($column-gutter / 2)
 
     &:nth-of-type(even)
       background-color: $bg-color-secondary
