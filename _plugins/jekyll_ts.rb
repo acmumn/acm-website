@@ -76,7 +76,6 @@ module Jekyll
 			# execute shell command
 			begin
 				command = "#{@tsc} -t ES5 --rootDir #{@tsdir} --outDir #{js_path} #{@tspath}"
-        puts command
 
 				`#{command}`
 			end
