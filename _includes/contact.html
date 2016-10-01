@@ -11,7 +11,7 @@
       </span>
 
       <label for="contact-form-email">
-        <span class="required"></span>
+        <span class="required" aria-hidden="true"></span>
         Your Email Address
       </label>
       <input type="email"
@@ -27,13 +27,17 @@
              placeholder="ACM is super awesome!"/>
 
       <label for="contact-form-message">
-        <span class="required"></span>
+        <span class="required" aria-hidden="true"></span>
         Your Message
       </label>
       <textarea id="contact-form-message" required></textarea>
 
+      <div id="contact-form-status">
+        <!-- Will get filled with confirmation messages or error messages. -->
+      </div>
+
       <div class="buttons">
-        <button type="button"
+        <button type="submit"
                 id="contact-form-submit"
                 class="primary-button">
           Send!

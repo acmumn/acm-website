@@ -21,11 +21,14 @@ input, textarea, select
   border: 1px solid $accent-color-primary
 
   padding: 10px 15px
+  margin-bottom: 15px
 
   font-size: 15px
 
 textarea
   resize: none
+
+  font-family: inherit
 
   min-height: 8em
 
@@ -39,11 +42,14 @@ textarea
   font-weight: bold
   margin: 0px 5px
 
+button
+  border: none
+  cursor: pointer
+
 button.primary-button
   border: none
   border-radius: 5px
   background-color: $accent-color-primary
-  cursor: pointer
 
   padding: 15px 25px
 
@@ -54,3 +60,53 @@ button.primary-button
 
   &:hover
     background-color: $logo-color-blue
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+.progress-anim
+  display: block
+  margin-left: auto
+  margin-right: auto
+
+  height: 50px
+  width: 50px
+  border-radius: 50%
+  border: 10px solid transparent
+  border-top: 10px solid $accent-color-primary
+  border-bottom: 10px solid $accent-color-primary
+
+  animation: spin 1s linear infinite
+
+.alert
+  display: block
+  padding: 15px
+  border-radius: 5px
+  text-align: center
+  font-weight: bold
+
+  box-shadow: 0px 8px 15px $shadow-color
+
+.alert-success
+  background-color: $alert-success-color
+.alert-error
+  background-color: $alert-error-color
+.alert-success, .alert-error
+  color: #fff
+
+  button[dismiss]
+    color: #fff
+    opacity: 0.4
+    background: none
+    font-size: 23px
+    float: right
+
+    position: relative
+    top: -2px
+
+    &:hover
+      opacity: 1
