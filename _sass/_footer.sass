@@ -7,7 +7,13 @@
 @media (min-width: $phone-breakpoint)
   %column
     box-sizing: border-box
-    width: $phone-breakpoint / 2
+    /* The -2px is here because without it, the design looked different
+       on the main page vs event pages, despite being the same code. The reason
+       was that the event pages weren't being minified, which resulted in the
+       whitespace _between_ tags changing the page.
+
+       Which is _not_ supposed to happen, but oh well. */
+    width: ($phone-breakpoint / 2) - 2px
     display: inline-block
     vertical-align: top
     padding: 0px ($column-gutter / 2)
