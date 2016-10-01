@@ -51,13 +51,14 @@ module Jekyll
 		def initialize(site, base, dir, name, tsroot, jsroot, tsc)
 			super(site, base, dir, name, nil)
 
-			@tspath = File.join(base, dir, name)
+			@tspath = File.join tsroot, name
 			@tsdir = File.join base, tsroot
 			@jsdir = jsroot
 			@tsc = tsc
 		end
 
 		def write(dest)
+      puts dest
 			# js name
 			ts_ext = /\.ts$/i
 			js_name = @name.gsub(ts_ext, ".js")
@@ -71,6 +72,7 @@ module Jekyll
 			# execute shell command
 			begin
 				command = "#{@tsc} -t ES5 --rootDir #{@tsdir} --outDir #{js_path} #{@tspath}"
+        puts command
 
 				`#{command}`
 			end
