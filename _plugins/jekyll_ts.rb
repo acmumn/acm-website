@@ -6,6 +6,10 @@
 
 # Written by Matt Sheehan, 2015
 
+# Directories have been modified to use ONLY relative
+# pathnames. This is not correct in a general sense, since
+# the output directory could be outside the project directory,
+# but it's necessary to deal with a Typescript bug on Windows.
 
 module Jekyll
 
@@ -52,7 +56,7 @@ module Jekyll
 			super(site, base, dir, name, nil)
 
 			@tspath = File.join tsroot, name
-			@tsdir = File.join base, tsroot
+			@tsdir = tsroot
 			@jsdir = jsroot
 			@tsc = tsc
 		end
@@ -63,14 +67,16 @@ module Jekyll
 			js_name = @name.gsub(ts_ext, ".js")
 
 			# js full path
-			js_path = File.join(dest, @jsdir)
-			js = File.join(js_path, js_name)
+			# js = File.join(js_path, js_name)
+      dest = File::basename dest
+      js_path = File::join dest, @jsdir
 
 			# make sure dir exists
 			FileUtils.mkdir_p(js_path)
 			# execute shell command
 			begin
 				command = "#{@tsc} -t ES5 --rootDir #{@tsdir} --outDir #{js_path} #{@tspath}"
+        puts command
 
 				`#{command}`
 			end
