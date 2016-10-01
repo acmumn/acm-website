@@ -6,7 +6,7 @@
     {% assign events = site.events | sort: startdate %}
     {% for event in events %}
       <li class="timeline-event">
-        <a href="{% if event.permalink %}{{ event.permalink }}{% else %}{{ event.url }}{% endif %}">
+        <a href="{% if event.externallink %}{{ event.externallink }}{% else %}{{ event.url }}{% endif %}">
           <span class="link">
             <span class="date">
               {% if event.enddate %}
