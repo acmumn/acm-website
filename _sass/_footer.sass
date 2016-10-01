@@ -6,10 +6,11 @@
 
 @media (min-width: $phone-breakpoint)
   %column
-    width: ($phone-breakpoint / 2) - $column-gutter
+    box-sizing: border-box
+    width: $phone-breakpoint / 2
     display: inline-block
     vertical-align: top
-    margin: 20px ($column-gutter / 2)
+    padding: 0px ($column-gutter / 2)
 
 #footer
   min-height: 100px
@@ -51,6 +52,8 @@
       +centered
       text-align: left
       display: inline-block
+      list-style-type: none
+      padding: 0px
 
       .position
         font-style: italic
@@ -65,9 +68,10 @@
 
       ol
         list-style-type: none
+        padding: 0px
 
   &> .content
     +centered
     display: block
     max-width: $phone-breakpoint
-    padding: 0px -($column-gutter / 2)
+    padding: 0px 0px

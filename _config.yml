@@ -38,4 +38,4 @@ defaults:
       path: ""
       type: events
     values:
-      layout: default
+      layout: event
