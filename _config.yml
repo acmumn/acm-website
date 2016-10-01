@@ -17,8 +17,10 @@ sass:
   style: compressed
   sass_dir: _sass
 
-gems:
-  - jekyll-press  # minification for all files
+# Compression
+compress_html:
+  clippings: all
+  comments: all
 
 # tsc: /usr/local/bin/tsc
 ts-src: ts
