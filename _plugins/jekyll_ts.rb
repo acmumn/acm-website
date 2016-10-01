@@ -1,8 +1,8 @@
 # Converts typescript files to javascript
 #
 # Uses the following configs
-#    tsc => path of typescript compiler,
-#    js_dest => output of js files after compilation
+#		 tsc => path of typescript compiler,
+#		 js_dest => output of js files after compilation
 
 # Written by Matt Sheehan, 2015
 
@@ -18,8 +18,8 @@ module Jekyll
 			# defaults to tsc assuming in system env path
 			tsc = site.config["tsc"] || "tsc"
 
-      # ts source
-      ts_src = site.config["ts-src"] || "/"
+			# ts source
+			ts_src = site.config["ts-src"] || "/"
 
 			# js destination
 			js_dest = site.config["js-dest"] || "/"
@@ -28,7 +28,7 @@ module Jekyll
 
 			site.static_files.delete_if do |sf|
 				next if not File.extname(sf.path) == ".ts"
-        
+				
 				# get the dirname of file, but we don't need the site source
 				ts_dir = File.dirname(sf.path.gsub(site.source, ""))
 				ts_name = File.basename(sf.path)
@@ -52,7 +52,7 @@ module Jekyll
 			super(site, base, dir, name, nil)
 
 			@tspath = File.join(base, dir, name)
-      @tsdir = File.join base, tsroot
+			@tsdir = File.join base, tsroot
 			@jsdir = jsroot
 			@tsc = tsc
 		end
@@ -76,5 +76,4 @@ module Jekyll
 			end
 		end
 	end
-
 end
