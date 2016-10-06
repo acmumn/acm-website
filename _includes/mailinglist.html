@@ -1,0 +1,58 @@
+<section id="mailinglist">
+  <div class="content">
+    <h2>Sign up for our mailing list!</h2>
+    <form id="mailinglist-form" action="#">
+      <span aria-hidden="true">
+        <span class="required"></span>
+        Marked fields are required
+      </span>
+
+      <label for="mailinglist-form-email">
+        <span class="required"></span>
+        Your Email Address
+      </label>
+      <input type="email"
+             id="mailinglist-form-email"
+             placeholder="first.last@email.com"
+             required/>
+
+      <label for="mailinglist-form-firstname">
+        <span class="required"></span>
+        Your First Name
+      </label>
+      <input type="text"
+             id="mailinglist-form-firstname"
+             placeholder="First name"
+             required/>
+
+      <label for="mailinglist-form-lastname">
+        <span class="required"></span>
+        Your Last Name
+      </label>
+      <input type="text"
+             id="mailinglist-form-lastname"
+             placeholder="Last name"
+             required/>
+
+      <!-- Fake field for catching bots. -->
+      <input type="text"
+             id="mailinglist-form-botcatcher"
+             tabindex="-1"
+             style="position: absolute; left: -5000px;"
+             value=""
+             aria-hidden="true"/>
+
+      <div id="mailinglist-form-status">
+        <!-- Will get filled with confirmation messages or error messages. -->
+      </div>
+
+      <div class="buttons">
+        <button type="submit"
+                id="mailinglist-form-submit"
+                class="primary-button">
+          Sign up!
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

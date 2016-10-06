@@ -4,8 +4,7 @@
 jQuery(function($) {
   $(document).on("click.close", '[dismiss]', function(event) {
     event.preventDefault();
-    var $this = $(this);
-    console.log("lol");
+    let $this = $(this);
 
     $this.closest($this.attr("dismiss")).remove();
   });

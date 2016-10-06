@@ -10,13 +10,11 @@ jQuery(function($) {
     console.log("Attempting to contact ACM UMN...");
     showProgressAnim();
 
-    var email = $("#contact-form-email").val();
-    var subject = $("#contact-form-subject").val();
-    var message = $("#contact-form-message").val();
+    let email = $("#contact-form-email").val();
+    let subject = $("#contact-form-subject").val();
+    let message = $("#contact-form-message").val();
 
     console.log("Sending data to server...");
-
-    // add a progress animation here
 
     $.post({
       url: appUrl,
@@ -26,6 +24,9 @@ jQuery(function($) {
         "email": email,
         "subject": subject,
         "message": message
+      },
+      headers: {
+        "Accept-Encoding": ""
       },
       success: success,
       error: error
