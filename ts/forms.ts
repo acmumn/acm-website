@@ -6,6 +6,12 @@ jQuery(function($) {
     event.preventDefault();
     let $this = $(this);
 
-    $this.closest($this.attr("dismiss")).remove();
+    $this.closest($this.attr("dismiss")).trigger("remove");
+  });
+
+  $(document).on("remove", function(event) {
+    event.preventDefault();
+
+    $(event.target).remove();
   });
 });
