@@ -11,6 +11,8 @@
 # the output directory could be outside the project directory,
 # but it's necessary to deal with a Typescript bug on Windows.
 
+require 'open3'
+
 module Jekyll
 
 	class TsGenerator < Generator
@@ -77,7 +79,12 @@ module Jekyll
 			begin
 				command = "#{@tsc} -t ES5 --rootDir #{@tsdir} --outDir #{js_path} #{@tspath}"
 
-				`#{command}`
+        stdout_str, stderr_str = Open3::capture3 command
+
+        # TypeScript compiler writers are incompetent and output to stdout for errors
+        if not stdout_str.empty? then STDERR.puts stdout_str end
+        if not stderr_str.empty? then STDERR.puts stderr_str end
+        stdout_str
 			end
 		end
 	end
