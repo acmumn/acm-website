@@ -34,6 +34,8 @@ exclude:
 collections:
   events:
     output: true
+  modals:
+    output: true
 
 defaults:
   - scope:
@@ -41,3 +43,8 @@ defaults:
       type: events
     values:
       layout: event
+  - scope:
+      path: ""
+      type: modals
+    values:
+      layout: modal

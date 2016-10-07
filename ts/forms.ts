@@ -9,7 +9,7 @@ jQuery(function($) {
     $this.closest($this.attr("dismiss")).trigger("remove");
   });
 
-  $(document).on("remove", function(event) {
+  $(document).on("remove", ".alert", function(event) {
     event.preventDefault();
 
     $(event.target).remove();
