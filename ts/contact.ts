@@ -15,6 +15,8 @@ jQuery(function($) {
     let subject = $("#contact-form-subject").val();
     let message = $("#contact-form-message").val();
 
+    message = "Sent from the ACM UMN website\n***\n" + message;
+
     console.log("Sending data to server...");
 
     $.post({
