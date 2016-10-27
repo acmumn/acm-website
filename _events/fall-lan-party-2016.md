@@ -12,7 +12,7 @@ gamers! We're starting at 6:00pm, and we'll be going all through the night!
 
 * Free pizza and drinks
 * Gaming with friends
-* Tournaments for CS:GO, League of Legends, and Dota 2
+* Overwatch Tournament
 
 In addition, this year we'll also have the following clubs attending!
 
