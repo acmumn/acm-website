@@ -2,6 +2,7 @@
 title: Fall Keller LAN Party
 startdate: 2016-11-18
 image: images/lan-party-logo-temp.png
+externallink: https://www.facebook.com/events/373738476303986
 ---
 
 ### November 18th, 2016
