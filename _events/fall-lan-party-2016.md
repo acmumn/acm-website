@@ -17,5 +17,4 @@ gamers! We're starting at 6:00pm, and we'll be going all through the night!
 
 In addition, this year we'll also have the following clubs attending!
 
-* Glitch
 * Super Smash Bros. Club
