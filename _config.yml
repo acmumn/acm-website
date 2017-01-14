@@ -37,6 +37,12 @@ collections:
   modals:
     output: true
 
+# This is a hack to get events to show up (since by common sense
+# we only show the events that are in the future. However,
+# it means that if we ever turn this into a blog, we can't
+# "schedule" content to show up at a certain time.
+future: true
+
 defaults:
   - scope:
       path: ""

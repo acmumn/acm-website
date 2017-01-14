@@ -3,18 +3,27 @@
     <h2>Upcoming Events</h2>
 
     <ol>
-    {% assign events = site.events | sort: startdate %}
+    {% assign events = site.events | sort: 'startdate' %}
+    {% capture now %}{{ site.time | date_to_xmlscheme }}{% endcapture %}
     {% for event in events %}
+      {% capture eventtime %}{{ event.startdate | date_to_xmlschema }}{% endcapture %}
+      {% capture eventendtime %}{{ event.enddate | default:"0000-01-01 00:00:00 -0600" | date_to_xmlschema }}{% endcapture %}
+      {% if now <= eventtime or now <= eventendtime %}
       <li class="timeline-event">
         <a href="{% if event.externallink %}{{ event.externallink }}{% else %}{{ event.url }}{% endif %}">
           <span class="link">
             <span class="date">
               {% if event.enddate %}
-                {{ event.startdate }} &ndash; {{ event.enddate }}
+                {{ event.startdate | date:"%A, %-d %B %Y" }} &ndash; {{ event.enddate | date:"%A, %-d %B %Y" }}
               {% else %}
-                {{ event.startdate }}
+                {{ event.startdate | date:"%A, %-d %B %Y" }}
               {% endif %}
             </span>
+            {% if now >= eventtime and now < eventendtime %}
+              <span class="ongoing">
+                Ongoing
+              </span>
+            {% endif %}
             <span class="event-icon">
               <img class="event-icon" 
                    src="{{ event.image | prepend: site.baseurl }}"
@@ -26,6 +35,7 @@
           </span>
         </a>
       </li>
+      {% endif %}
     {% endfor %}
     </ol>
   </div>
