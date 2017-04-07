@@ -6,11 +6,6 @@
 
 # Written by Matt Sheehan, 2015
 
-# Directories have been modified to use ONLY relative
-# pathnames. This is not correct in a general sense, since
-# the output directory could be outside the project directory,
-# but it's necessary to deal with a Typescript bug on Windows.
-
 require 'open3'
 
 module Jekyll
