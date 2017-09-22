@@ -1,27 +1,38 @@
-- name: Kairi Lassard
+year: 2017-2018
+list:
+- name: Ari Bible
   position: President
-  email: lassa005@umn.edu
-- name: Andie Renfew
+  email: bible012@umn.edu
+- name: Alison Gould
   position: Vice President
-  email: renfr025@umn.edu
-- name: Caleb Wiberg
+  email: gould112@umn.edu
+- name: Helen Larson
   position: Treasurer
-  email: wiber040@umn.edu
-- name: Alex Vincent
+  email: lars5188@umn.edu
+- name: Noah Wrolson
   position: Secretary
-  email: vince160@umn.edu
-- name: William Yao
-  position: Membership
-  email: yaoxx292@umn.edu
-- name: Brooke Padilla
+  email: wrols009@umn.edu
+- name: Christian Randle
   position: Community Ambassador
-  email: padil031@umn.edu
-- name: Kate Kuehl
+  email: randl075@umn.edu
+- name: Nathan Ringo
   position: Webmaster
-  email: kuehl088@umn.edu
-- name: Brian Green
+  email: ringo025@umn.edu
+- name: Michael Zhang
+  position: Webmaster Jr.
+  email: zhan4854@umn.edu
+- name: B Green
   position: Systems Admin
   email: gree1994@umn.edu
-- name: Luc Nelson
+- name: Tiffany Nelson
+  position: Miscellaneous Officer
+  email: nels8961@umn.edu
+- name: Kairi Lassard
+  position: God-Emperor
+  email: lassa005@umn.edu
+- name: Mitch Croal
+  position: Arts & Crafts
+  email: croal008@umn.edu
+- name: Shana Watters
   position: Faculty Advisor
-  email: nels1912@umn.edu
+  email: watt0087@umn.edu

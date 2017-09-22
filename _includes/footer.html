@@ -1,9 +1,9 @@
 <footer id="footer">
   <div class="content">
     <div id="officers">
-      <h1>ACM Officers 2016-2017</h1>
+      <h1>ACM Officers {{site.data.officers.year}}</h1>
       <ul>
-        {% for officer in site.data.officers %}
+        {% for officer in site.data.officers.list %}
           <li>
             <a href="mailto:{{ officer.email }}">
               {{ officer.name }}
