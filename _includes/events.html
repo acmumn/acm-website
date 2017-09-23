@@ -25,9 +25,15 @@
               </span>
             {% endif %}
             <span class="event-icon">
-              <img class="event-icon" 
-                   src="{{ event.image | prepend: site.baseurl }}"
-                   alt=""/>
+			  {% if event.image %}
+                <img class="event-icon" 
+                     src="{{ event.image | prepend: site.baseurl }}"
+                     alt=""/>
+			  {% else if event.externalimage %}
+                <img class="event-icon" 
+                     src="{{ event.externalimage }}"
+                     alt=""/>
+			  {% endif %}
             </span>
             <h2 class="event-name">
               {{ event.title }}
