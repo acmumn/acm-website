@@ -3,16 +3,19 @@
     <div id="officers">
       <h1>ACM Officers and Advisors {{site.data.officers.year}}</h1>
       <ul>
-        {% for officer in site.data.officers.list %}
-          <li>
-            <a href="mailto:{{ officer.email }}">
-              {{ officer.name }}
-            </a>
-            &mdash;
-            <span class="position">
-              {{ officer.position }}
-            </span>
-          </li>
+        {% for committee in site.data.officers.committees %}
+          <h3 style="margin: 9px auto 3px auto;">{{ committee.name }}</h3>
+          {% for officer in committee.members %}
+            <li>
+              <a href="mailto:{{ officer.email }}">
+                {{ officer.name }}
+              </a>
+              &mdash;
+              <span class="position">
+                {{ officer.position }}
+              </span>
+            </li>
+          {% endfor %}
         {% endfor %}
       </ul>
     </div>
